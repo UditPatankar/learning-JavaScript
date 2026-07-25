@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+
+   <!-- HTML starts downloading but stops at this tag, then js will get downloaded and executed, then HTML parse & DOM building gets continued, so this js cannot access to the below HTML at all.-->
+   <!-- <script src="main.js"></script> -->
+
+   <!-- this script gets downloaded along with HTML, once script is downloaded the HTML download pauses(if not already finished) and the script gets executed, then HTML download continues (if was not finished)  : Unpredictable -->
+   <!-- <script async src="main.js"></script> -->
+
+   <!-- this js will download along with HTML, but will only get executed after whole HTML is parsed/ DOM creation -->
+   <script defer src="main.js"></script>
+
+</head>
+<body>
+   <h1>Hello, JavaSrcipt!</h1>
+
+   <div id="testElement">
+
+   </div>
+
+   <!-- this js can access to all the element from document coz, at this point DOM has been build. -->
+   <!-- <script src="main.js"></script>  -->
+</body>
+</html>
