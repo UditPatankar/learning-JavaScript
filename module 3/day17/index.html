@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Day 17</title>
+   <script defer src="index.js"></script>
+   <script defer src="task.js"></script>
+   <style>
+      body {
+         margin: 20px;
+         background: #333;
+         color: #fff;
+         font-family: 'Trebuchet MS', Arial, sans-serif;
+      }
+      button, input {
+         padding: 10px;
+         font-family: monospace;
+         border: none;
+         border-radius: 5px;
+         cursor: pointer;
+      }
+      p {
+         padding: 2px;
+      }
+      ul li{
+         padding: 5px;
+         list-style-type: none;
+      }
+      .result {
+         color: greenyellow;
+      }
+   </style>
+</head>
+<body>
+   <h1 id="heading">Day 17: Introduction to DOM (Document Object Model)</h1>
+   <p class="info">Will learn some basic stuff about DOM.</p>
+   <p class="info">Hope it will make sense after a while.</p>
+   <p>Let's also do some highlighting!</p>
+   <button id="highlightBtn" onclick="highlightText()" >Toggle Highlight</button>
+
+   <hr>
+
+   <input type="text" id="searchInput" placeholder="Search...." onkeyup="filterList()">
+   <ul id="itemList">
+      <li>Apple</li>
+      <li>Orange</li>
+      <li>Grapes</li>
+      <li>Pinapple</li>
+      <li>Cherry</li>
+   </ul>
+
+   <hr>  
+
+   <div class="tasks">
+      <h2>Tasks -</h2>
+      <p>1. Find the Most Frequent Word in a Paragraph</p>
+      <div id="text">This is a test. This test is only a test.</div>
+      <div class="result" id="result1"></div>
+
+      <p>2. Zebra Pattern</p>
+      <ul id="cars">
+         <li>BMW</li>
+         <li>Mahindra</li>
+         <li>Audi</li>
+         <li>Toyota</li>
+         <li>Honda</li>
+         <li>Hundai</li>
+         <li>Tata</li>
+         <li>Suzuki</li>
+      </ul>
+
+   </div>
+</body>
+</html>
