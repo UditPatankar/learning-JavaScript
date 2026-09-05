@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>from</title>
+   <link rel="stylesheet" href="ui.css">
+   <script defer src="logic.js"></script> 
+</head>
+<body>
+   <h1>Dynamic Form Generator</h1>
+
+   <!-- field selector -->
+    <div class="field-selector-section">
+      <label for="fieldType">Select Field</label>
+      <select name="fieldType" id="fieldType">
+         <option value="">Select option...</option>
+         <option value="text">Text</option>
+         <option value="email">Email</option>
+         <option value="number">Number</option>
+      </select>
+      <button id="addFieldBtn">Add Input Field</button>
+    </div>
+    
+    <!-- form container -->
+    <div id="formContainer"></div>
+</body>
+</html>
