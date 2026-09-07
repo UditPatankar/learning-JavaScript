@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Event Paths</title>
+   <link rel="stylesheet" href="event-path.css">
+   <script defer src="event-path.js"></script>
+</head>
+<body>
+   <h2>Event Bubbling & Capturing</h2>
+
+   <div id="grandParent">
+      <div id="parent">
+         <button id="child">Bubble & Capture</button>
+      </div>
+   </div>
+
+   <hr>
+
+   <h2>Event Delegation</h2>
+   <ul id="itemList">
+      <li>item 1</li>
+      <li>item 2</li>
+      <li>item 3</li>
+      <li>item 4</li>
+   </ul>
+
+   <hr>
+
+   <h2>Stop Event Propagation</h2>
+   <div id="father" style=" padding: 20px; background: greenyellow;">Father
+      <button id="son">Son</button>
+   </div>
+</body>
+</html>

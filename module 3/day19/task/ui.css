@@ -1,0 +1,37 @@
+body {
+  background-color: whitesmoke;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.tab-headers {
+  border-bottom: 2px solid rgba(0, 0, 0, 0.2);
+  padding: 0;
+}
+
+.tab {
+  margin-right: 10px;
+  padding: 10px;
+  border: none;
+  background: transparent;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.2rem;
+  color: rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+}
+
+.tab.active {
+  border-bottom: 2px solid forestgreen;
+  /* background-color: #e8f5e9; */
+  color: forestgreen;
+}
+
+.tab-contents {
+  margin-top: 10px;
+}
+
+.content {
+  display: none;
+}
+.content.active {
+  display: block;
+}
