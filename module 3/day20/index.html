@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Day 19</title>
+   <script defer src="index.js"></script>
+
+   <style>
+      body {
+         font-family: sans-serif;
+      }
+      .card {
+         margin: 2px;
+         padding: 10px;
+         border: 2px solid rgb(0, 0, 0, 0.2);
+         width: 100%;
+         max-width: 500px;
+      }
+      .title {
+         font-weight: bold;
+      }
+      .desc {
+         color: rgb(0, 0, 0, 0.5);
+      }
+   </style>
+</head>
+<body>
+   <h1>DOM Tricks</h1>
+
+   <!-- <div id="parent">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+      <div>4</div>
+   </div> -->
+
+   <!-- evrything inside the template even the comment get's placed in a fragment-->
+   <template id="card-template">
+      <div class="card">   
+         <div class="title"></div>
+         <div class="desc"></div>
+      </div>
+   </template>
+
+   <p id="para">Hello, <strong>world </strong>and universe!</p>
+
+   <div id="watchme">Watch Me</div>
+   <button onclick="changeDOM()">change</button>
+</body>
+</html>

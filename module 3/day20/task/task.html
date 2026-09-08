@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Task</title>
+   <script defer src="task.js"></script>
+   <style>
+      body {
+         font-family: sans-serif;
+         display: flex;
+         flex-direction: column;
+      }
+      ul {
+         list-style-type: none;
+         padding: 0;
+         display: flex;
+         gap: 10px;
+      }
+      li { 
+         padding: 10px 20px;
+         border: 1px solid #ccc;
+         cursor: pointer;
+      }
+
+      /* Active state styling */
+      li.active {
+         background-color: #007bff;
+         color: white;
+         border-color: #0056b3;
+      }
+
+      ul#mylist {
+         display: grid;
+         grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+      }
+      ul#mylist li {
+         padding: 5px;
+         background-color: ghostwhite ;
+      }
+
+      .box {
+         border: 2px solid #333;
+         padding: 15px;
+         margin: 10px 0;
+         background-color: #f4f4f4;
+      }
+      .badge {
+         background-color: #007bff;
+         color: white;
+         padding: 4px 8px;
+         border-radius: 4px;
+      }
+      .output-container {
+         display: flex;
+         gap: 20px;
+         margin-top: 20px;
+      }
+      .clone-zone {
+         flex: 1;
+         border: 1px dashed #aaa;
+         padding: 10px;
+         min-height: 100px;
+      }
+      
+      #task5 {
+         border: 2px solid #333;
+         padding: 10px;
+         margin: 10px;
+      }
+   </style>
+</head>
+<body>
+   <h1>Day 20 tasks</h1>
+
+   <div id="task1">
+      <ul>
+         <li class="active">Item 1</li>
+         <li>Item 2</li>
+         <li>Item 3</li>
+         <li>Item 4</li>
+      </ul>
+   </div>
+
+   <div id="task2">
+      <p id="para">This is the sample para to test javascript range object.</p>
+   </div>
+
+   <div id="task3">
+      <ul id="mylist"></ul>
+   </div>
+
+   <div id="task4">
+      <!-- Original Element to Clone -->
+      <div id="targetCard" class="box">
+         <h3>Original Card</h3>
+         <p>This is paragraph text inside the card.</p>
+
+      </div>
+
+      <button id="btnDeep">Clone Deep (true)</button>
+      <button id="btnShallow">Clone Shallow (false)</button>
+
+      <div class="output-container">
+         <div>
+            <h4>Deep Clone Result:</h4>
+            <div id="deepResult" class="clone-zone"></div>
+         </div>
+         <div>
+            <h4>Shallow Clone Result:</h4>
+            <div id="shallowResult" class="clone-zone"></div>
+         </div>
+      </div>
+   </div>
+
+   <div id="task5">
+      <div id="watchthis">text node</div>
+      <button id="changeDOM">Change</button>
+   </div>
+</body>
+</html>
