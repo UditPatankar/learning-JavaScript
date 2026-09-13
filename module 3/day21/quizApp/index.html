@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Quiz App</title>
+      <link rel="stylesheet" href="style.css">
+      <script defer src="logic.js"></script>
+   </head>
+   <body>
+      <h1>Quiz App</h1>
+
+      <div id="quiz-box" class="quiz-box">
+         <div id="welcome-screen" class="welcome-screen">
+            <h2>Welcome to the JavaScript Quiz! 🚀</h2> 
+            <p>Test your JavaScript knowledge with 10 quick questions. You have 15 seconds for each question.</p>
+            <button id="start-btn" class="start-btn">Start</button>
+         </div>
+
+         <div id="quiz-screen" class="quiz-screen hide">
+            <div id="timer" class="timer">⏱️ <span id="timeleft"></span></div>
+            <div id="question-box" class="question-box"></div>
+            <div id="options-box" class="options-box"></div>
+            <button id="next-btn" class="next-button">Next Question</button>
+         </div>
+         
+         <div id="score-screen" class="score-screen hide">
+            <h2>Quiz Completed! 🎉</h2>
+            <p id="score" class="score"></p>
+            <button id="restart-btn" class="restart-btn">Restart Button</button>
+         </div>
+      </div>
+   </body>
+</html>

@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Recipe Finder</title>
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="script.js"></script>
+  </head>
+  <body>
+    <main class="recipe-app">
+      <h1>Recipe Finder 🍳</h1>
+
+      <!-- Search Section -->
+      <section class="search-section">
+        <input
+          type="text"
+          id="search-input"
+          class="search-input"
+          placeholder="Search for a recipe..."
+          autocomplete="off" />
+        <button id="clear-btn" class="clear-btn"> Clear </button>
+      </section>
+
+      <!-- Recipe List -->
+      <section id="recipe-list" class="recipe-list">
+        <!-- Recipes will be added dynamically using JavaScript -->
+      </section>
+      <template id="recipe-template"> 
+         <div class="recipe-card"> 
+            <h2 class="title"></h2> 
+            <div class="recipe-details"> 
+               <p>Ingredients:</p> 
+               <ul class="ingredients-list"></ul> 
+               <p class="instructions"></p> 
+            </div> 
+         </div> 
+      </template>
+
+      <!-- No Results Message -->
+      <p id="no-results" class="no-results hide"> No recipes found </p>
+    </main>
+  </body>
+</html>
