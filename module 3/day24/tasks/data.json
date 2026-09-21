@@ -1,0 +1,27 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Alice Johnson",
+      "email": "alice@example.com",
+      "isActive": true,
+      "skills": ["JavaScript", "React", "Node.js"]
+    },
+    {
+      "id": 2,
+      "name": "Bob Smith",
+      "email": "bob@example.com",
+      "isActive": false,
+      "skills": ["Python", "Django", "SQL"]
+    },
+    {
+      "id": 3,
+      "name": "Charlie Brown",
+      "email": "charlie@example.com",
+      "isActive": true,
+      "skills": ["HTML", "CSS", "UI/UX"]
+    }
+  ],
+  "totalCount": 3,
+  "status": "success"
+}
