@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library Management System (LMS)</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer type="module" src="main.js"></script>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header>
+            <h1>📚 Library Management System</h1>
+        </header>
+
+        <!-- Error Message -->
+        <p id="error-msg" class="error-text hidden"></p>
+
+        <!-- Role Selection Screen -->
+        <section id="auth-section" class="card auth-card">
+            <h2>Select Your Role</h2>
+            <div class="form-group">
+                <label for="role-select">Login As:</label>
+                <select id="role-select">
+                    <option value="">-- Choose Role --</option>
+                    <option value="admin">Admin</option>
+                    <option value="member">Member</option>
+                </select>
+            </div>
+
+            <!-- Admin Passcode Input -->
+            <div id="admin-passcode-group" class="form-group hidden">
+                <label for="admin-passcode-input">Admin Passcode:</label>
+                <input type="password" id="admin-passcode-input" placeholder="Enter admin passcode">
+            </div>
+
+            <!-- Member ID Input -->
+            <div id="member-id-group" class="form-group hidden">
+                <label for="member-id-input">Member ID:</label>
+                <input type="text" id="member-id-input" placeholder="e.g., M-101">
+            </div>
+
+            <button id="login-btn" class="btn btn-primary" disabled>Enter System</button>
+        </section>
+
+        <!-- Main Dashboard Layout -->
+        <div id="dashboard-section" class="dashboard hidden">
+            
+            <!-- Left Panel: Actions & Controls -->
+            <div class="controls-panel">
+                
+                <!-- Admin Card with Expanded Form Fields & Separate Delete Form -->
+                <section id="admin-panel" class="card role-panel hidden">
+                    <h2>Admin Controls</h2>
+                    
+                    <form id="add-book-form">
+                        <h3>➕ Add / Restock Book</h3>
+                        <div class="form-group">
+                            <label for="isbn">ISBN / ID:</label>
+                            <input type="text" id="isbn" placeholder="e.g., 978-013" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="title">Book Title:</label>
+                            <input type="text" id="title" placeholder="e.g., Clean Code" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="author">Author:</label>
+                            <input type="text" id="author" placeholder="e.g., Robert C. Martin" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="genre">Genre:</label>
+                            <input type="text" id="genre" placeholder="e.g., Technology" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="pub-year">Publication Year:</label>
+                            <input type="number" id="pub-year" placeholder="e.g., 2008" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="publisher">Publisher:</label>
+                            <input type="text" id="publisher" placeholder="e.g., O'Reilly" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Add Book</button>
+                    </form>
+
+                    <form id="delete-book-form" class="admin-action-divider">
+                        <h3>🗑️ Delete Book From System</h3>
+                        <div class="form-group">
+                            <label for="delete-isbn">Target ISBN:</label>
+                            <input type="text" id="delete-isbn" placeholder="Enter ISBN to remove permanently" required>
+                        </div>
+                        <button type="submit" class="btn btn-danger">Delete Book</button>
+                    </form>
+                </section>
+
+                <!-- Member Card -->
+                <section id="member-panel" class="card role-panel hidden">
+                    <h2>Member Actions (<span id="current-member-display"></span>)</h2>
+                    <div class="form-group">
+                        <label for="action-isbn">Book ISBN:</label>
+                        <input type="text" id="action-isbn" placeholder="Enter ISBN to borrow/return">
+                    </div>
+                    <div class="action-buttons">
+                        <button id="borrow-btn" class="btn btn-success">Borrow Book</button>
+                        <button id="return-btn" class="btn btn-warning">Return Book</button>
+                    </div>
+                </section>
+
+                <button id="logout-btn" class="btn btn-secondary">Switch Role / Logout</button>
+            </div>
+
+            <!-- Right Panel: Live Inventory Display -->
+            <div class="display-panel">
+                <section class="card inventory-card">
+                    <h2>Library Inventory</h2>
+                    <div id="book-list" class="book-grid">
+                        <p class="placeholder-text">No books in inventory yet.</p>
+                    </div>
+                </section>
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>
