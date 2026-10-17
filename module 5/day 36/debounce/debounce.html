@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Debounce, explained</title>
+  <script defer src="debounce.js"></script>
+  <style>
+    body { font-family: sans-serif; padding: 20px; }
+    input { padding: 8px; width: 250px; font-size: 16px; display: block; margin-bottom: 6px; }
+    ul { padding-left: 20px; min-height: 60px; }
+    .stats { color: #666; font-size: 14px; margin-bottom: 20px; }
+  </style>
+</head>
+<body>
+
+  <h3>✅ Correct debounce (arrow function)</h3>
+  <input type="text" id="good-box" placeholder="Type fast here...">
+  <div class="stats" id="good-stats"></div>
+  <ul id="good-list"></ul>
+
+  <h3>❌ Broken debounce (regular function in setTimeout)</h3>
+  <input type="text" id="bad-box" placeholder="Type here, filtering won't work...">
+  <div class="stats" id="bad-stats"></div>
+  <ul id="bad-list"></ul>
+</body>
+</html>

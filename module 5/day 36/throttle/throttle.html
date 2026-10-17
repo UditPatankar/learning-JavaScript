@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Throttling</title>
+  <script defer src="throttle.js"></script>
+  <style>
+    body { font-family: sans-serif; padding: 20px; max-width: 600px; margin: 0 auto; }
+    #area {
+      height: 180px; border: 2px dashed #999; border-radius: 10px;
+      display: flex; align-items: center; justify-content: center;
+      color: #666; user-select: none;
+      touch-action: none; /* so touch devices send pointermove instead of scrolling the page */
+    }
+    .stats p { margin: 10px 0; font-size: 18px; }
+    .stats b { display: inline-block; min-width: 50px; }
+  </style>
+</head>
+<body>
+
+  <h2>Throttling demo</h2>
+  <p>Keep moving your mouse inside the box for ~3 seconds, then compare the 3 counters.</p>
+
+  <div id="area">Move your mouse here</div>
+
+  <div class="stats">
+    <p>No throttle (raw events): <b id="raw-stats">0</b></p>
+    <p>BAD throttle (made inside handler): <b id="bad-stats">0</b></p>
+    <p>GOOD throttle (500ms): <b id="good-stats">0</b></p>
+  </div>
+
+  
+</body>
+</html>
